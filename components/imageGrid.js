@@ -3,6 +3,7 @@ import React from "react";
 import { getColumnCount, hp, wp } from "../helpers/common";
 import { MasonryFlashList } from "@shopify/flash-list";
 import ImageCard from "./imageCard";
+import { theme } from "../constants/theme";
 
 const ImageGrid = ({ images }) => {
   const columns = getColumnCount();
@@ -20,6 +21,7 @@ const ImageGrid = ({ images }) => {
         showsVerticalScrollIndicator={false}
         estimatedItemSize={200}
       />
+      {/* <Text style={styles.underText}>©Developed by KYLE</Text> */}
     </View>
   );
 };
@@ -33,6 +35,13 @@ const styles = StyleSheet.create({
   listContainerStyle: {
     paddingHorizontal: wp(4),
   },
+  // underText: {
+  //   textAlign: "center",
+  //   fontSize: 12,
+  //   color: theme.colors.neutral(0.6),
+  //   fontWeight: theme.fontWeights.semibold,
+  //   marginTop: 14,
+  // },
 });
 
 export default ImageGrid;
